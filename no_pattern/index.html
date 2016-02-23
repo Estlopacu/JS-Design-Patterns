@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport">
+		<title>NO PATTERN</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style type="text/css" media="screen">
+			.complete{
+				opacity: 0.5;
+				text-decoration: line-through;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3 col-xs-12">
+					<div class="page-header">
+						<h1>TODO LIST <small>Add the do of things...</small></h1>
+					</div>
+				</div>
+				<div class="col-sm-6 col-sm-offset-3 col-xs-12">
+					<div class="form-group">
+						<input type="text" class="form-control" id="task" placeholder="Task">
+					</div>
+					<div class="form-group">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" id="complete"> Complete
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<button type="button" class="btn btn-default" onclick="save()">Save</button>
+					</div>
+					<hr/>
+				</div>
+				<div class="col-sm-6 col-sm-offset-3 col-xs-12">
+					<ul class="list-group" id="tasks">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+	</body>
+</html>
