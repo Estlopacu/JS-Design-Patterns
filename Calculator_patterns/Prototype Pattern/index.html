@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/united/bootstrap.min.css">
+    <title>PROTOTYPE PATTERN</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+          <div class="page-header">
+            <h1>Calculadora <small>Prototype Pattern...</small></h1>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+          <label for="">Number 1</label>
+          <input type="text" name="nu1" class="form-control">
+          <label for="">Number 2</label>
+            <input type="text" name="nu2" class="form-control">
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+          <div class="checkbox">
+            <label>
+              <input type="radio" name="operacion" value="suma" checked="checked" /> Suma
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="radio" name="operacion" value="resta"/>Resta
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="radio" name="operacion" value="multiplicacion"/>Multiplicación
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="radio" name="operacion" value="division"/>Division
+            </label>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-offset-4 text-center">
+          <input type="submit" class="btn btn-default" onclick="calcu.prototype.doIt()">
+        </div>
+      </div>
+      <h2 id="resultado" class="text-success text-center"></h2>
+    </div>
+    <script src="object.js"></script>
+  </body>
+</html>
