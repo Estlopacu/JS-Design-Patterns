@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+		var i = 0; 
+		var doIt = function(){
+			if(i<10){
+				document.getElementById("res").innerHTML = i++;
+			}else{
+				i=0;
+			}
+		};
+		setInterval(doIt,1000);
+
+		</script>
+	</head>
+	<body>
+		<div>
+			<h1 id="res"></h1>
+		</div>
+	</body>
+</html>

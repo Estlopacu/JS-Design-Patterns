@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+		var imagenes = [
+		"https://www.placecage.com/gif/500/501", 
+		"https://www.placecage.com/gif/500/502",
+		"https://www.placecage.com/gif/500/503"];
+		var counter = 0;
+		var doIt = function() {
+			if (counter > 2) {
+				counter=0;
+			} else {
+				document.getElementById("imagen").src = imagenes[counter];
+				counter++;
+			}
+		};
+		setInterval(doIt, 1000);
+		</script>
+	</head>
+	<body>
+		<div>
+			<h1 id="res">
+				<img src="https://www.placecage.com/gif/500/504" alt="" id="imagen">
+			</h1>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script>
+		var listaVehiculos = [];
+		function vehiculo(marca,modelo,ano){
+			this.marca = marca;
+			this.modelo = modelo;
+			this.ano = ano;
+		}
+		function save(){
+			var marca = document.getElementById("marca").value;
+			var modelo = document.getElementById("modelo").value;
+			var ano = document.getElementById("ano").value;
+
+			var vehiculoNuevo = new vehiculo(marca,modelo,ano);
+
+			listaVehiculos.push(vehiculoNuevo);
+			
+			update();
+		}
+		function update(){
+			document.getElementById("lista").innerHTML = "";
+			for (var i = 0; i < listaVehiculos.length ; i++) {
+				document.getElementById("lista").innerHTML += "<div><h1>"+listaVehiculos[i].modelo+" "+listaVehiculos[i].marca+"</h1><h2>"+listaVehiculos[i].ano+"<h2></div><hr/>";
+				if (listaVehiculos[i].llantas) {
+					document.getElementById("lista").innerHTML += "<p>Llantas "+listaVehiculos[i].llantas+"</p>";
+				}
+			}
+		}
+		function addllantas(){
+			vehiculo.prototype.llantas = 4;
+			update();
+		}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Crear Carros</h1>
+			<hr/>
+			<h2>Ingreso</h2>
+			<div class="form-group">
+				<label for="">Marca </label><input class="form-control" type="text" id="marca"></label>
+			</div>
+			<div class="form-group">
+				<label for="">Modelo </label><input class="form-control" type="text" id="modelo">
+			</div>
+			<div class="form-group">
+				<label for="">Año </label><input class="form-control" type="text" id="ano">
+			</div>
+				<button onclick="save()">Guardar</button>
+			<hr/>
+			<h2>Lista</h2>
+			<div id="lista"></div>
+			<button onclick="addllantas()">Llantas</button>
+		</div>
+	</body>
+</html>

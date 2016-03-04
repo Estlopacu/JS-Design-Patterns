@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+		function start(){
+		var hora = 0,
+			minutos = 0,
+			segundos = 0;
+
+		var timer = function() {
+			if (minutos > 58) {
+				hora++;
+				segundos = -1;
+				minutos = 0;
+				document.getElementById("h").innerHTML = hora;
+				document.getElementById("min").innerHTML = minutos;
+				document.getElementById("seg").innerHTML = segundos;
+			} 
+			if(segundos > 58){
+				segundos = -1;
+				document.getElementById("seg").innerHTML = segundos;
+				minutos++;
+				document.getElementById("min").innerHTML = minutos;
+			}
+			segundos++;
+			document.getElementById("seg").innerHTML = segundos;
+		};
+		// var timerMinutos = function() {
+		// 	document.getElementById("min").innerHTML = minutos;
+		// 	minutos++;
+		// };
+		// var timerSegundos = function() {
+		// 	document.getElementById("seg").innerHTML = segundos;
+		// 	segundos++;
+		// };
+		setInterval(timer, 1000);
+		}
+		</script>
+	</head>
+	<body>
+		<div>
+			<h1>
+				<span id="h">0</span>
+				<span>:</span>
+				<span id="min">0</span>
+				<span>:</span>
+				<span id="seg">0</span>
+			</h1>
+			<button onclick="start()">Start!</button>
+
+		</div>
+	</body>
+</html>
