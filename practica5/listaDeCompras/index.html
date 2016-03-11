@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="
+https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.9/css/bootstrap-material-design.css">
+    <title>LISTA DE COMPRAS</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+          <div class="page-header">
+            <h1>Lista <small>de Compras </small></h1>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center" id="vista1">
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col-xs-6 col-sm-6" id="listaCampos">
+              <label for="">Compras</label>
+              <input type="text" class="form-control producto">
+            </div>
+            <div class="col-xs-6 col-sm-6">
+              <label for="">Seleccione</label>
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="listado.agregarCampo()">Un Campo más!</button>
+                <button type="button" class="btn btn-default" onclick="listado.obtenerCampos()">Listo!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center" id="vista2">
+          <div id="resultado"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
